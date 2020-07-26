@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Python从入门到实践项目一:外星人入侵 | liump blog</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="Python学习(book):<<Python编程:从入门到实践>> 项目一">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/assets/css/0.styles.a696ca11.css" as="style"><link rel="preload" href="/assets/js/app.91516f2d.js" as="script"><link rel="preload" href="/assets/js/7.58fd3bc6.js" as="script"><link rel="preload" href="/assets/js/4.d132524d.js" as="script"><link rel="preload" href="/assets/js/30.f134215e.js" as="script"><link rel="prefetch" href="/assets/js/10.5a15dfbe.js"><link rel="prefetch" href="/assets/js/11.922b18ab.js"><link rel="prefetch" href="/assets/js/12.218ced56.js"><link rel="prefetch" href="/assets/js/13.53b94774.js"><link rel="prefetch" href="/assets/js/14.417e3490.js"><link rel="prefetch" href="/assets/js/15.5f116638.js"><link rel="prefetch" href="/assets/js/16.7f9b1663.js"><link rel="prefetch" href="/assets/js/17.ca45f10f.js"><link rel="prefetch" href="/assets/js/18.3b6d9425.js"><link rel="prefetch" href="/assets/js/19.65e051f1.js"><link rel="prefetch" href="/assets/js/20.57af5642.js"><link rel="prefetch" href="/assets/js/21.585ed1cc.js"><link rel="prefetch" href="/assets/js/22.8f4f87e2.js"><link rel="prefetch" href="/assets/js/23.b4bb26b9.js"><link rel="prefetch" href="/assets/js/24.b6ef6552.js"><link rel="prefetch" href="/assets/js/25.6bc27fe9.js"><link rel="prefetch" href="/assets/js/26.c2453e05.js"><link rel="prefetch" href="/assets/js/27.ab1cadd8.js"><link rel="prefetch" href="/assets/js/28.637aa2f9.js"><link rel="prefetch" href="/assets/js/29.11c7b616.js"><link rel="prefetch" href="/assets/js/31.b3c49d70.js"><link rel="prefetch" href="/assets/js/32.e06cc7a8.js"><link rel="prefetch" href="/assets/js/33.90702da1.js"><link rel="prefetch" href="/assets/js/34.17b2afe0.js"><link rel="prefetch" href="/assets/js/35.77883eeb.js"><link rel="prefetch" href="/assets/js/36.87fcbc32.js"><link rel="prefetch" href="/assets/js/37.148ddbee.js"><link rel="prefetch" href="/assets/js/38.dc3b335e.js"><link rel="prefetch" href="/assets/js/39.a1de5ec6.js"><link rel="prefetch" href="/assets/js/40.2f932922.js"><link rel="prefetch" href="/assets/js/41.291cd0d0.js"><link rel="prefetch" href="/assets/js/42.bcd318b1.js"><link rel="prefetch" href="/assets/js/43.a14da8e4.js"><link rel="prefetch" href="/assets/js/44.0c68ec25.js"><link rel="prefetch" href="/assets/js/45.f4f168e0.js"><link rel="prefetch" href="/assets/js/46.5e00d3be.js"><link rel="prefetch" href="/assets/js/47.511cd318.js"><link rel="prefetch" href="/assets/js/48.ba453816.js"><link rel="prefetch" href="/assets/js/49.a08d7f7a.js"><link rel="prefetch" href="/assets/js/5.ce657947.js"><link rel="prefetch" href="/assets/js/50.b84b0339.js"><link rel="prefetch" href="/assets/js/51.8ed0687f.js"><link rel="prefetch" href="/assets/js/52.9b4d4efc.js"><link rel="prefetch" href="/assets/js/53.f3977826.js"><link rel="prefetch" href="/assets/js/54.eb790e0e.js"><link rel="prefetch" href="/assets/js/55.1664b3bc.js"><link rel="prefetch" href="/assets/js/56.3be8657f.js"><link rel="prefetch" href="/assets/js/57.37c6586e.js"><link rel="prefetch" href="/assets/js/58.2b0d87f5.js"><link rel="prefetch" href="/assets/js/59.a15317dd.js"><link rel="prefetch" href="/assets/js/6.c9d0d5d7.js"><link rel="prefetch" href="/assets/js/60.04ceac63.js"><link rel="prefetch" href="/assets/js/61.69c3a5f6.js"><link rel="prefetch" href="/assets/js/62.ea97ea9c.js"><link rel="prefetch" href="/assets/js/8.100c3933.js"><link rel="prefetch" href="/assets/js/9.acdb2e2e.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.9283cff1.js"><link rel="prefetch" href="/assets/js/vuejs-paginate.99c484cc.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a696ca11.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/" class="nav-link home-link">liump blog </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/" class="nav-link">文章</a></li><li class="nav-item"><a href="/tag/" class="nav-link">标签</a></li><li class="nav-item"><a href="/document/" class="nav-link">资源</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/" class="nav-link mobile-home-link">liump blog </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/" class="nav-link">文章</a></li><li class="mobile-nav-item"><a href="/tag/" class="nav-link">标签</a></li><li class="mobile-nav-item"><a href="/document/" class="nav-link">资源</a></li> <li class="mobile-nav-item"><!----></li></ul></div></div></div> <div class="content-wrapper"><div id="vuepress-theme-blog__post-layout"><article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="vuepress-blog-theme-content"><header><h1 itemprop="name headline" class="post-title">
+        Python从入门到实践项目一:外星人入侵
+      </h1> <div class="post-meta"><div itemprop="publisher author" itemtype="http://schema.org/Person" itemscope="itemscope" class="post-meta-author"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-navigation"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg> <span itemprop="name">liump</span> <span itemprop="address">   in WuHan</span></div> <div class="post-meta-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2020-2-10">
+      2020-02-10
+    </time></div> <ul itemprop="keywords" class="post-meta-tags"><li class="post-tag" data-v-d832e844><a href="/tag/Python" data-v-d832e844> Python </a></li></ul></div></header> <div itemprop="articleBody" class="content__default"><blockquote><p>本文是学习 &lt;&lt;Python 从入门到实践&gt;&gt; 的项目一</p></blockquote> <p>::: tip
+学习使用Pygame开发游戏<br>
+这是一组功能强大而有趣的模块,可用于管理图形/动画/声音,让你能够更轻松地的开发复杂的游戏.通过使用Pygame来处理在屏幕上绘制图像等任务,你不用考虑众多繁琐而艰难的编码工作,而是将重点放在程序的高级逻辑上.<br>
+:::</p> <h2 id="规划项目"><a href="#规划项目" class="header-anchor">#</a> 规划项目</h2> <p>开发大型项目时,做好规划后在动手编写项目很重要.规划可确保你不偏离轨道,从而提高项目成功的可能性.<br>
+下面来编写有关游戏 &lt;&lt;外星人入侵&gt;&gt;的描述,其中虽然没有涵盖这款游戏的所有细节,但能让你清楚地知道该如何动手开发它.<br> <strong>在游戏&lt;&lt;外星人入侵&gt;&gt;中,玩家控制着一艘最初出现在屏幕底部中央的飞船.玩家可以使用箭头键左右移动飞船,还可以使用空格键进行射击.游戏开始时,一群外星人出现在天空中,他们在屏幕中向下移动.外加的任务是射杀这些外星人.玩家将所有外星人都消灭干净后,将出现一群新的外星人,他们移动的速度更快.只要有外星人撞到了外加的飞船或到达了屏幕底部,玩家就损失一艘飞船.玩家损失三艘飞船后,游戏结束.</strong><br>
+在第一个开发阶段,我们将创建一艘可左右移动的飞船,这艘飞船在用户按空格键时能够开火.</p> <h2 id="安装pygame"><a href="#安装pygame" class="header-anchor">#</a> 安装Pygame</h2> <p>使用 <code>pip install pygame</code>安装,我使用的是 pycharm 编辑器,初次开启项目需要配置pygame.</p> <h2 id="_1-绘制窗口"><a href="#_1-绘制窗口" class="header-anchor">#</a> 1.绘制窗口</h2> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">import</span> sys
+<span class="token keyword">import</span> pygame
+
+
+<span class="token keyword">def</span> <span class="token function">run_game</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 初始化游戏并创建一个屏幕对象</span>
+    pygame<span class="token punctuation">.</span>init<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    screen <span class="token operator">=</span> pygame<span class="token punctuation">.</span>display<span class="token punctuation">.</span>set_mode<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">1200</span><span class="token punctuation">,</span> <span class="token number">800</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    pygame<span class="token punctuation">.</span>display<span class="token punctuation">.</span>set_caption<span class="token punctuation">(</span><span class="token string">&quot;Alien Invasion&quot;</span><span class="token punctuation">)</span>
+    <span class="token comment"># 开始游戏的主循环</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        <span class="token comment"># 监视键盘和鼠标事件</span>
+        <span class="token keyword">for</span> event <span class="token keyword">in</span> pygame<span class="token punctuation">.</span>event<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> event<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> pygame<span class="token punctuation">.</span>QUIT<span class="token punctuation">:</span>
+                sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    pygame<span class="token punctuation">.</span>display<span class="token punctuation">.</span>flip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+run_game<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p>init 用于初始化背景设置,让Pygame能够正确的工作<br>
+pygame.display.set_mode() 中放入的元组用于控制屏幕大小<br>
+pygame.display.flip() 命令Pygame让最近绘制屏幕可见.在这里,它在每次执行while循环时都绘制一个空屏幕,并擦去旧屏幕,使得只有新屏幕可见.<br>
+为访问Pygame检测到的事件,使用方法pygame.event.get().所有键盘和鼠标事件都将促使for循环运行.在这个循环中,我们将编写一系列的if语句来检测并响应特定的事件.例如,玩家单击游戏窗口的关闭按钮时,将检测到pygame.QUIT事件,而我们调用sys.exit()来退出游戏.</p> <h2 id="_2-设置背景色"><a href="#_2-设置背景色" class="header-anchor">#</a> 2.设置背景色</h2> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment"># alien_invasion.py</span>
+<span class="token keyword">import</span> sys
+<span class="token keyword">import</span> pygame
+
+
+<span class="token keyword">def</span> <span class="token function">run_game</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 初始化游戏并创建一个屏幕对象</span>
+    pygame<span class="token punctuation">.</span>init<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    screen <span class="token operator">=</span> pygame<span class="token punctuation">.</span>display<span class="token punctuation">.</span>set_mode<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">1200</span><span class="token punctuation">,</span> <span class="token number">800</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    pygame<span class="token punctuation">.</span>display<span class="token punctuation">.</span>set_caption<span class="token punctuation">(</span><span class="token string">&quot;Alien Invasion&quot;</span><span class="token punctuation">)</span>
+    <span class="token comment"># 设置背景色</span>
+    bg_color <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">230</span><span class="token punctuation">,</span> <span class="token number">230</span><span class="token punctuation">,</span> <span class="token number">230</span><span class="token punctuation">)</span>
+    <span class="token comment"># 开始游戏的主循环</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        <span class="token comment"># 监视键盘和鼠标事件</span>
+        <span class="token keyword">for</span> event <span class="token keyword">in</span> pygame<span class="token punctuation">.</span>event<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> event<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> pygame<span class="token punctuation">.</span>QUIT<span class="token punctuation">:</span>
+                sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment"># 每次循环时都重绘屏幕</span>
+        screen<span class="token punctuation">.</span>fill<span class="token punctuation">(</span>bg_color<span class="token punctuation">)</span>
+        <span class="token comment"># 让最近绘制的屏幕可见</span>
+        pygame<span class="token punctuation">.</span>display<span class="token punctuation">.</span>flip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+run_game<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="_3-创建设置类"><a href="#_3-创建设置类" class="header-anchor">#</a> 3.创建设置类</h2> <p>每次给游戏添加新功能时,通常也将引入一些新设置.下面来编写一个名为settings的模块,其中包含一个名Settings的类,用于将所有设置存储在一个地方,以免在代码中到处添加设置.这样,我们就能传递一个设置对象,而不是众多不同的设置.另外,这让函数调用更简单,且在项目增大时修改游戏的外观更容易:要修改游戏,只需修改settings.py中的一些值,而无需查找散布在文件中的不同设置.<br>
+下面是最初的Settings类:</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment"># settings.py</span>
+<span class="token keyword">class</span> <span class="token class-name">Settings</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;存储&lt;&lt;外星人入侵&gt;&gt;的所有设置的类&quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;初始化游戏的设置&quot;&quot;&quot;</span>
+        <span class="token comment"># 屏幕设置</span>
+        self<span class="token punctuation">.</span>screen_width <span class="token operator">=</span> <span class="token number">1200</span>
+        self<span class="token punctuation">.</span>screen_height <span class="token operator">=</span> <span class="token number">800</span>
+        self<span class="token punctuation">.</span>bg_color <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">230</span><span class="token punctuation">,</span> <span class="token number">230</span><span class="token punctuation">,</span> <span class="token number">230</span><span class="token punctuation">)</span>
+				
+<span class="token comment"># alien_invasion.py</span>
+<span class="token keyword">import</span> sys
+<span class="token keyword">import</span> pygame
+<span class="token keyword">from</span> settings <span class="token keyword">import</span> Settings
+
+
+<span class="token keyword">def</span> <span class="token function">run_game</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 初始化pygame/设置/屏幕对象</span>
+    pygame<span class="token punctuation">.</span>init<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    ai_settings <span class="token operator">=</span> Settings<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    screen <span class="token operator">=</span> pygame<span class="token punctuation">.</span>display<span class="token punctuation">.</span>set_mode<span class="token punctuation">(</span><span class="token punctuation">(</span>ai_settings<span class="token punctuation">.</span>screen_width<span class="token punctuation">,</span>ai_settings<span class="token punctuation">.</span>screen_height<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    pygame<span class="token punctuation">.</span>display<span class="token punctuation">.</span>set_caption<span class="token punctuation">(</span><span class="token string">&quot;Alien Invasion&quot;</span><span class="token punctuation">)</span>
+    <span class="token comment"># 开始游戏的主循环</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        <span class="token comment"># 监视键盘和鼠标事件</span>
+        <span class="token keyword">for</span> event <span class="token keyword">in</span> pygame<span class="token punctuation">.</span>event<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> event<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> pygame<span class="token punctuation">.</span>QUIT<span class="token punctuation">:</span>
+                sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment"># 每次循环时都重绘屏幕</span>
+        screen<span class="token punctuation">.</span>fill<span class="token punctuation">(</span>ai_settings<span class="token punctuation">.</span>bg_color<span class="token punctuation">)</span>
+        <span class="token comment"># 让最近绘制的屏幕可见</span>
+        pygame<span class="token punctuation">.</span>display<span class="token punctuation">.</span>flip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+run_game<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="_4-添加飞船图像"><a href="#_4-添加飞船图像" class="header-anchor">#</a> 4. 添加飞船图像</h2> <p>为游戏选择素材时,务必要注意许可.最安全/最不费钱的方式是使用 http://pixabay.com 等网站提供的图形,这些图形无需许可,你可以对其进行修改.<br>
+本书的配套资料 <a href="http://ituring.com.cn/book/1861" target="_blank" rel="noopener noreferrer">图灵-Python从入门到实践<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a><br>
+右侧有配套资料下载</p> <ol><li>创建 Ship 类</li></ol> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">import</span> pygame
+<span class="token keyword">class</span> <span class="token class-name">Ship</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> screen<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;初始化飞船并设置其初始位置&quot;&quot;&quot;</span>
+        self<span class="token punctuation">.</span>screen <span class="token operator">=</span> screen
+        <span class="token comment"># 加载飞船图像并获取其外接矩形</span>
+        self<span class="token punctuation">.</span>image <span class="token operator">=</span> pygame<span class="token punctuation">.</span>image<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token string">'images/ship.bmp'</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>rect <span class="token operator">=</span> self<span class="token punctuation">.</span>image<span class="token punctuation">.</span>get_rect<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>screen_rect <span class="token operator">=</span> screen<span class="token punctuation">.</span>get_rect<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment"># 将每艘新飞船放在屏幕底部中央</span>
+        self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>centerx <span class="token operator">=</span> self<span class="token punctuation">.</span>screen_rect<span class="token punctuation">.</span>centerx
+        self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>bottom <span class="token operator">=</span> self<span class="token punctuation">.</span>screen_rect<span class="token punctuation">.</span>bottom
+    <span class="token keyword">def</span> <span class="token function">blitme</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;在指定位置绘制飞船&quot;&quot;&quot;</span>
+        self<span class="token punctuation">.</span>screen<span class="token punctuation">.</span>blit<span class="token punctuation">(</span>self<span class="token punctuation">.</span>image<span class="token punctuation">,</span>self<span class="token punctuation">.</span>rect<span class="token punctuation">)</span>
+</code></pre></div><p>::: tip
+在 Pygame中,原点(0, 0)位于屏幕左上角,向右下方移动时,坐标值将增大.在1200 × 800的屏幕上,原点位于左上角,而右下角的坐标为(1200, 800)
+:::
+2. 绘制飞船,修改 alien_invasion.py,导入 Ship 类</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">import</span> sys
+<span class="token keyword">import</span> pygame
+<span class="token keyword">from</span> settings <span class="token keyword">import</span> Settings
+<span class="token keyword">from</span> ship <span class="token keyword">import</span> Ship
+
+
+<span class="token keyword">def</span> <span class="token function">run_game</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 初始化pygame/设置/屏幕对象</span>
+    pygame<span class="token punctuation">.</span>init<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    ai_settings <span class="token operator">=</span> Settings<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    screen <span class="token operator">=</span> pygame<span class="token punctuation">.</span>display<span class="token punctuation">.</span>set_mode<span class="token punctuation">(</span><span class="token punctuation">(</span>ai_settings<span class="token punctuation">.</span>screen_width<span class="token punctuation">,</span>ai_settings<span class="token punctuation">.</span>screen_height<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    pygame<span class="token punctuation">.</span>display<span class="token punctuation">.</span>set_caption<span class="token punctuation">(</span><span class="token string">&quot;Alien Invasion&quot;</span><span class="token punctuation">)</span>
+    <span class="token comment"># 创建一艘飞船</span>
+    ship <span class="token operator">=</span> Ship<span class="token punctuation">(</span>screen<span class="token punctuation">)</span>
+    <span class="token comment"># 开始游戏的主循环</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        <span class="token comment"># 监视键盘和鼠标事件</span>
+        <span class="token keyword">for</span> event <span class="token keyword">in</span> pygame<span class="token punctuation">.</span>event<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> event<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> pygame<span class="token punctuation">.</span>QUIT<span class="token punctuation">:</span>
+                sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment"># 每次循环时都重绘屏幕</span>
+        screen<span class="token punctuation">.</span>fill<span class="token punctuation">(</span>ai_settings<span class="token punctuation">.</span>bg_color<span class="token punctuation">)</span>
+        ship<span class="token punctuation">.</span>blitme<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment"># 让最近绘制的屏幕可见</span>
+        pygame<span class="token punctuation">.</span>display<span class="token punctuation">.</span>flip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+run_game<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="_5-重构-模块game-functions"><a href="#_5-重构-模块game-functions" class="header-anchor">#</a> 5.重构: 模块game_functions</h2> <p>创建一个名为game_functions的新模块,它将存储大量让游戏&lt;&lt;外星人入侵&gt;&gt;运行的函数.</p> <ol><li>函数 check_events()
+将管理事件的代码移到 check_events()</li> <li>函数 update_screen()
+将更新屏幕的代码移到 update_screen()</li></ol> <h2 id="_6-驾驶飞船"><a href="#_6-驾驶飞船" class="header-anchor">#</a> 6.驾驶飞船</h2> <ol><li>响应按键
+每当用户按键时,都将在Pygame中注册一个事件.事件都是通过方法pygame.event.get()获取的,因此在函数check_event()中,我们需要制定要检查哪些类型的事件.每次按键都被注册为一个KEYDOWN事件.<br>
+检测到KEYDOWN事件时,我们需要检查按下的是否是特定的键.例如,如果按下的是右箭头键,我们就增大飞船的rect.centerx值,将飞船向右移动:</li></ol> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment"># game_functions.py</span>
+<span class="token keyword">def</span> <span class="token function">check_events</span><span class="token punctuation">(</span>ship<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;响应按键和鼠标事件&quot;&quot;&quot;</span>
+    <span class="token keyword">for</span> event <span class="token keyword">in</span> pygame<span class="token punctuation">.</span>event<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> event<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> pygame<span class="token punctuation">.</span>QUIT<span class="token punctuation">:</span>
+            sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> event<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> pygame<span class="token punctuation">.</span>KEYDOWN<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> event<span class="token punctuation">.</span>key <span class="token operator">==</span> pygame<span class="token punctuation">.</span>K_RIGHT<span class="token punctuation">:</span>
+                <span class="token comment"># 向右移动飞船</span>
+                ship<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>centerx<span class="token operator">+=</span><span class="token number">1</span>
+</code></pre></div><ol start="2"><li>允许不断移动
+在Ship类中添加update()方法用于控制,如果按下的是右箭头键就移动位置<br>
+在game_functions中添加KEYUP事件监听,按下时(KEYDOWN)标志为True,抬起时(KEYUP)为False</li> <li>左右移动
+在右移动的基础上添加左移动事件</li> <li>调整飞船的速度</li></ol> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment"># settings.py</span>
+<span class="token keyword">class</span> <span class="token class-name">Settings</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;存储&lt;&lt;外星人入侵&gt;&gt;的所有设置的类&quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;初始化游戏的设置&quot;&quot;&quot;</span>
+        <span class="token comment"># 屏幕设置</span>
+        self<span class="token punctuation">.</span>screen_width <span class="token operator">=</span> <span class="token number">1200</span>
+        self<span class="token punctuation">.</span>screen_height <span class="token operator">=</span> <span class="token number">800</span>
+        self<span class="token punctuation">.</span>bg_color <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">230</span><span class="token punctuation">,</span> <span class="token number">230</span><span class="token punctuation">,</span> <span class="token number">230</span><span class="token punctuation">)</span>
+        <span class="token comment"># 飞船的设置</span>
+        self<span class="token punctuation">.</span>ship_speed_factor <span class="token operator">=</span> <span class="token number">1.5</span>
+				
+<span class="token comment"># ship.py</span>
+<span class="token keyword">import</span> pygame
+<span class="token keyword">class</span> <span class="token class-name">Ship</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>ai_settings<span class="token punctuation">,</span> screen<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;初始化飞船并设置其初始位置&quot;&quot;&quot;</span>
+        self<span class="token punctuation">.</span>screen <span class="token operator">=</span> screen
+        self<span class="token punctuation">.</span>ai_settings <span class="token operator">=</span> ai_settings
+        <span class="token comment"># 加载飞船图像并获取其外接矩形</span>
+        self<span class="token punctuation">.</span>image <span class="token operator">=</span> pygame<span class="token punctuation">.</span>image<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token string">'images/ship.bmp'</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>rect <span class="token operator">=</span> self<span class="token punctuation">.</span>image<span class="token punctuation">.</span>get_rect<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>screen_rect <span class="token operator">=</span> screen<span class="token punctuation">.</span>get_rect<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment"># 将每艘新飞船放在屏幕底部中央</span>
+        self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>centerx <span class="token operator">=</span> self<span class="token punctuation">.</span>screen_rect<span class="token punctuation">.</span>centerx
+        self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>bottom <span class="token operator">=</span> self<span class="token punctuation">.</span>screen_rect<span class="token punctuation">.</span>bottom
+        <span class="token comment"># 在飞船的属性center中存储小数值</span>
+        self<span class="token punctuation">.</span>center <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>centerx<span class="token punctuation">)</span>
+        <span class="token comment"># 移动标志</span>
+        self<span class="token punctuation">.</span>moving_right <span class="token operator">=</span> <span class="token boolean">False</span>
+        self<span class="token punctuation">.</span>moving_left <span class="token operator">=</span> <span class="token boolean">False</span>
+    <span class="token keyword">def</span> <span class="token function">update</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;根据移动标志调整飞船的位置&quot;&quot;&quot;</span>
+        <span class="token comment"># 更新飞船的center值,而不是rect</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>moving_right<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>center <span class="token operator">+=</span> self<span class="token punctuation">.</span>ai_settings<span class="token punctuation">.</span>ship_speed_factor
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>moving_left<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>center <span class="token operator">-=</span> self<span class="token punctuation">.</span>ai_settings<span class="token punctuation">.</span>ship_speed_factor
+        <span class="token comment"># 根据self.center更新rect对象</span>
+        self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>centerx <span class="token operator">=</span> self<span class="token punctuation">.</span>center
+    <span class="token keyword">def</span> <span class="token function">blitme</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;在指定位置绘制飞船&quot;&quot;&quot;</span>
+        self<span class="token punctuation">.</span>screen<span class="token punctuation">.</span>blit<span class="token punctuation">(</span>self<span class="token punctuation">.</span>image<span class="token punctuation">,</span>self<span class="token punctuation">.</span>rect<span class="token punctuation">)</span>
+				
+<span class="token comment"># alien_invasion.py</span>
+<span class="token operator">-</span><span class="token operator">-</span>snip<span class="token operator">-</span><span class="token operator">-</span>
+<span class="token keyword">def</span> <span class="token function">run_game</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+		<span class="token operator">-</span><span class="token operator">-</span>snip<span class="token operator">-</span><span class="token operator">-</span>
+		<span class="token comment"># 创建飞船</span>
+		ship <span class="token operator">=</span> Ship<span class="token punctuation">(</span>ai_settings<span class="token punctuation">,</span> screen<span class="token punctuation">)</span>
+		<span class="token operator">-</span><span class="token operator">-</span>snip<span class="token operator">-</span><span class="token operator">-</span>
+</code></pre></div><ol start="5"><li>限制飞船的活动范围
+如果玩家按住箭头键的事件足够长,飞船将移动到屏幕外面,修改Ship类的方法update()</li></ol> <div class="language-py extra-class"><pre class="language-py"><code><span class="token operator">-</span><span class="token operator">-</span>snip<span class="token operator">-</span><span class="token operator">-</span>
+    <span class="token keyword">def</span> <span class="token function">update</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;根据移动标志调整飞船的位置&quot;&quot;&quot;</span>
+        <span class="token comment"># 更新飞船的center值,而不是rect</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>moving_right <span class="token keyword">and</span> self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>right <span class="token operator">&lt;</span> self<span class="token punctuation">.</span>screen_rect<span class="token punctuation">.</span>right<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>center <span class="token operator">+=</span> self<span class="token punctuation">.</span>ai_settings<span class="token punctuation">.</span>ship_speed_factor
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>moving_left <span class="token keyword">and</span> self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>left <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>center <span class="token operator">-=</span> self<span class="token punctuation">.</span>ai_settings<span class="token punctuation">.</span>ship_speed_factor
+        <span class="token comment"># 根据self.center更新rect对象</span>
+        self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>centerx <span class="token operator">=</span> self<span class="token punctuation">.</span>center
+<span class="token operator">-</span><span class="token operator">-</span>snip<span class="token operator">-</span><span class="token operator">-</span>
+</code></pre></div><ol start="6"><li>重构check_events()
+创建了2个新函数:check_keydown_events()和check_keyup_events(),用于分离代码,避免过长难以维护.</li></ol> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment"># game_functions.py</span>
+<span class="token keyword">import</span> sys
+<span class="token keyword">import</span> pygame
+
+
+<span class="token keyword">def</span> <span class="token function">check_keydown_events</span><span class="token punctuation">(</span>event<span class="token punctuation">,</span> ship<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;响应按键&quot;&quot;&quot;</span>
+    <span class="token keyword">if</span> event<span class="token punctuation">.</span>key <span class="token operator">==</span> pygame<span class="token punctuation">.</span>K_RIGHT<span class="token punctuation">:</span>
+        ship<span class="token punctuation">.</span>moving_right <span class="token operator">=</span> <span class="token boolean">True</span>
+    <span class="token keyword">elif</span> event<span class="token punctuation">.</span>key <span class="token operator">==</span> pygame<span class="token punctuation">.</span>K_LEFT<span class="token punctuation">:</span>
+        ship<span class="token punctuation">.</span>moving_left <span class="token operator">=</span> <span class="token boolean">True</span>
+
+
+<span class="token keyword">def</span> <span class="token function">check_keyup_events</span><span class="token punctuation">(</span>event<span class="token punctuation">,</span> ship<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;响应松开&quot;&quot;&quot;</span>
+    <span class="token keyword">if</span> event<span class="token punctuation">.</span>key <span class="token operator">==</span> pygame<span class="token punctuation">.</span>K_RIGHT<span class="token punctuation">:</span>
+        ship<span class="token punctuation">.</span>moving_right <span class="token operator">=</span> <span class="token boolean">False</span>
+    <span class="token keyword">if</span> event<span class="token punctuation">.</span>key <span class="token operator">==</span> pygame<span class="token punctuation">.</span>K_LEFT<span class="token punctuation">:</span>
+        ship<span class="token punctuation">.</span>moving_left <span class="token operator">=</span> <span class="token boolean">False</span>
+
+
+<span class="token keyword">def</span> <span class="token function">check_events</span><span class="token punctuation">(</span>ship<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;响应按键和鼠标事件&quot;&quot;&quot;</span>
+    <span class="token keyword">for</span> event <span class="token keyword">in</span> pygame<span class="token punctuation">.</span>event<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> event<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> pygame<span class="token punctuation">.</span>QUIT<span class="token punctuation">:</span>
+            sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> event<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> pygame<span class="token punctuation">.</span>KEYDOWN<span class="token punctuation">:</span>
+            check_keydown_events<span class="token punctuation">(</span>event<span class="token punctuation">,</span> ship<span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> event<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> pygame<span class="token punctuation">.</span>KEYUP<span class="token punctuation">:</span>
+            check_keyup_events<span class="token punctuation">(</span>event<span class="token punctuation">,</span> ship<span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">update_screen</span><span class="token punctuation">(</span>ai_settings<span class="token punctuation">,</span> screen<span class="token punctuation">,</span> ship<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;更新屏幕上的图像,并切换到新屏幕&quot;&quot;&quot;</span>
+    <span class="token comment"># 每次循环时都重绘屏幕</span>
+    screen<span class="token punctuation">.</span>fill<span class="token punctuation">(</span>ai_settings<span class="token punctuation">.</span>bg_color<span class="token punctuation">)</span>
+    ship<span class="token punctuation">.</span>blitme<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment"># 让最近绘制的屏幕可见</span>
+    pygame<span class="token punctuation">.</span>display<span class="token punctuation">.</span>flip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><ol start="7"><li>文件结构</li></ol> <ul><li>alien_invasion.py
+<ul><li>主文件alien_invasion.py创建一系列整个游戏都要用到的对象:存储在ai_settings中的设置/存储在screen中的主显示surface以及一个飞船实例.文件alien_invasion.py还包含游戏的主循环,这是一个调用check_events()/ship.update()和update_screen()的while循环.</li></ul></li> <li>settings.py
+<ul><li>文件settings.py包含Settings类,这个类只包含方法__init__(),它初始化控制游戏外观和飞船速度的属性.</li></ul></li> <li>game_functions.py
+<ul><li>文件game_functions包含一系列函数,游戏的大部分工作都是由它们完成的.函数check_events()检测相关的事件,如按键和松开,并使用辅助函数check_keydown_events()和check_keyup_events()来处理这些事件.就目前而言,这些函数管理飞船的移动.模块game_functions还包含函数update_screen(),它用于在每次执行主循环时都重绘屏幕.</li></ul></li> <li>ship.py
+<ul><li>文件ship.py包含Ship类,这个类包含方法__init__()/管理飞船位置的方法update()以及在屏幕上绘制飞船的方法blitme().表示飞船的图像存储在文件夹image下的文件ship.bmp中.</li></ul></li></ul> <ol start="8"><li>射击</li></ol> <ul><li>首先,更新setting.py,在其方法__init__()末尾存储新类Bullet所需的值:</li></ul> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment"># settings.py</span>
+<span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token operator">-</span><span class="token operator">-</span>snip<span class="token operator">-</span><span class="token operator">-</span>
+		<span class="token comment"># 子弹设置</span>
+    self<span class="token punctuation">.</span>bullet_speed_factor <span class="token operator">=</span> <span class="token number">1</span>
+		self<span class="token punctuation">.</span>bullet_width <span class="token operator">=</span> <span class="token number">3</span>
+		self<span class="token punctuation">.</span>bullet_height <span class="token operator">=</span> <span class="token number">15</span>
+		self<span class="token punctuation">.</span>bullet_color <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span> <span class="token number">60</span><span class="token punctuation">,</span> <span class="token number">60</span><span class="token punctuation">)</span>
+</code></pre></div><ul><li>创建Bullet类</li></ul> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment"># bullet.py</span>
+<span class="token keyword">import</span> pygame
+<span class="token keyword">from</span> pygame<span class="token punctuation">.</span>sprite <span class="token keyword">import</span> Sprite
+
+<span class="token keyword">class</span> <span class="token class-name">Bullet</span><span class="token punctuation">(</span>Sprite<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;一个对飞船发射的子弹进行管理的类&quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> ai_settings<span class="token punctuation">,</span> screen<span class="token punctuation">,</span> ship<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;在飞船所处的位置创建一个子弹对象&quot;&quot;&quot;</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>screen <span class="token operator">=</span> screen
+        <span class="token comment"># 在(0,0)处创建一个表示子弹的矩形,再设置正确的位置</span>
+        self<span class="token punctuation">.</span>rect <span class="token operator">=</span> pygame<span class="token punctuation">.</span>Rect<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> ai_settings<span class="token punctuation">.</span>bullet_width<span class="token punctuation">,</span>ai_settings<span class="token punctuation">.</span>bullet_height<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>centerx <span class="token operator">=</span> ship<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>centerx
+        self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>top <span class="token operator">=</span> ship<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>top
+        <span class="token comment"># 存储用小数表示的子弹位置</span>
+        self<span class="token punctuation">.</span>y <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>y<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>color <span class="token operator">=</span> ai_settings<span class="token punctuation">.</span>bullet_color
+        self<span class="token punctuation">.</span>speed_factor <span class="token operator">=</span> ai_settings<span class="token punctuation">.</span>bullet_speed_factor
+
+
+    <span class="token keyword">def</span> <span class="token function">update</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;向上移动子弹&quot;&quot;&quot;</span>
+        <span class="token comment">#更新表示子弹位置的小数值</span>
+        self<span class="token punctuation">.</span>y <span class="token operator">-=</span> self<span class="token punctuation">.</span>speed_factor
+        <span class="token comment">#更新表示子弹的rect的位置</span>
+        self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>y <span class="token operator">=</span> self<span class="token punctuation">.</span>y
+
+
+    <span class="token keyword">def</span> <span class="token function">draw_bullet</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;在屏幕上绘制子弹&quot;&quot;&quot;</span>
+        pygame<span class="token punctuation">.</span>draw<span class="token punctuation">.</span>rect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>screen<span class="token punctuation">,</span> self<span class="token punctuation">.</span>color<span class="token punctuation">,</span> self<span class="token punctuation">.</span>rect<span class="token punctuation">)</span>
+</code></pre></div><ul><li>将子弹存储到编组中
+<ul><li>定义Bullet类和必要的设置后,就可以编写代码,在玩家每次按空格键都射出一发子弹.</li></ul></li></ul> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment"># alien_invasion.py</span>
+<span class="token keyword">import</span> pygame
+<span class="token keyword">from</span> pygame<span class="token punctuation">.</span>sprite <span class="token keyword">import</span> Group
+<span class="token keyword">from</span> settings <span class="token keyword">import</span> Settings
+<span class="token keyword">from</span> ship <span class="token keyword">import</span> Ship
+<span class="token keyword">import</span> game_functions <span class="token keyword">as</span> gf
+
+
+<span class="token keyword">def</span> <span class="token function">run_game</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 初始化pygame/设置/屏幕对象</span>
+    pygame<span class="token punctuation">.</span>init<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    ai_settings <span class="token operator">=</span> Settings<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    screen <span class="token operator">=</span> pygame<span class="token punctuation">.</span>display<span class="token punctuation">.</span>set_mode<span class="token punctuation">(</span><span class="token punctuation">(</span>ai_settings<span class="token punctuation">.</span>screen_width<span class="token punctuation">,</span>ai_settings<span class="token punctuation">.</span>screen_height<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    pygame<span class="token punctuation">.</span>display<span class="token punctuation">.</span>set_caption<span class="token punctuation">(</span><span class="token string">&quot;Alien Invasion&quot;</span><span class="token punctuation">)</span>
+    <span class="token comment"># 创建一艘飞船</span>
+    ship <span class="token operator">=</span> Ship<span class="token punctuation">(</span>ai_settings<span class="token punctuation">,</span> screen<span class="token punctuation">)</span>
+    <span class="token comment"># 创建一个用于存储子弹的编组</span>
+    bullets <span class="token operator">=</span> Group<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment"># 开始游戏的主循环</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        gf<span class="token punctuation">.</span>check_events<span class="token punctuation">(</span>ai_settings<span class="token punctuation">,</span> screen<span class="token punctuation">,</span> ship<span class="token punctuation">,</span> bullets<span class="token punctuation">)</span>
+        ship<span class="token punctuation">.</span>update<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        bullets<span class="token punctuation">.</span>update<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment"># 删除已消失的子弹</span>
+        <span class="token keyword">for</span> bullet <span class="token keyword">in</span> bullets<span class="token punctuation">.</span>copy<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> bullet<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>bottom <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                bullets<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>bullet<span class="token punctuation">)</span>
+        gf<span class="token punctuation">.</span>update_screen<span class="token punctuation">(</span>ai_settings<span class="token punctuation">,</span> screen<span class="token punctuation">,</span> ship<span class="token punctuation">,</span> bullets<span class="token punctuation">)</span>
+
+
+run_game<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p>::: tip
+编组不要放在 while 循环中,否则会产生大量编组,影响游戏性能.
+:::</p> <ul><li>开火</li></ul> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment"># game_functions.py</span>
+<span class="token keyword">import</span> sys
+<span class="token keyword">import</span> pygame
+<span class="token keyword">from</span> bullet <span class="token keyword">import</span> Bullet
+
+
+<span class="token keyword">def</span> <span class="token function">check_keydown_events</span><span class="token punctuation">(</span>event<span class="token punctuation">,</span> ai_settings<span class="token punctuation">,</span> screen<span class="token punctuation">,</span> ship<span class="token punctuation">,</span> bullets<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;响应按键&quot;&quot;&quot;</span>
+    <span class="token keyword">if</span> event<span class="token punctuation">.</span>key <span class="token operator">==</span> pygame<span class="token punctuation">.</span>K_RIGHT<span class="token punctuation">:</span>
+        ship<span class="token punctuation">.</span>moving_right <span class="token operator">=</span> <span class="token boolean">True</span>
+    <span class="token keyword">elif</span> event<span class="token punctuation">.</span>key <span class="token operator">==</span> pygame<span class="token punctuation">.</span>K_LEFT<span class="token punctuation">:</span>
+        ship<span class="token punctuation">.</span>moving_left <span class="token operator">=</span> <span class="token boolean">True</span>
+    <span class="token keyword">elif</span> event<span class="token punctuation">.</span>key <span class="token operator">==</span> pygame<span class="token punctuation">.</span>K_SPACE<span class="token punctuation">:</span>
+        <span class="token comment"># 创建一颗子弹,并将其加入到编组bullets中</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>bullets<span class="token punctuation">)</span> <span class="token operator">&lt;</span> ai_settings<span class="token punctuation">.</span>bullet_allowed<span class="token punctuation">:</span>
+            new_bullet <span class="token operator">=</span> Bullet<span class="token punctuation">(</span>ai_settings<span class="token punctuation">,</span> screen<span class="token punctuation">,</span> ship<span class="token punctuation">)</span>
+            bullets<span class="token punctuation">.</span>add<span class="token punctuation">(</span>new_bullet<span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">check_keyup_events</span><span class="token punctuation">(</span>event<span class="token punctuation">,</span> ship<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;响应松开&quot;&quot;&quot;</span>
+    <span class="token keyword">if</span> event<span class="token punctuation">.</span>key <span class="token operator">==</span> pygame<span class="token punctuation">.</span>K_RIGHT<span class="token punctuation">:</span>
+        ship<span class="token punctuation">.</span>moving_right <span class="token operator">=</span> <span class="token boolean">False</span>
+    <span class="token keyword">if</span> event<span class="token punctuation">.</span>key <span class="token operator">==</span> pygame<span class="token punctuation">.</span>K_LEFT<span class="token punctuation">:</span>
+        ship<span class="token punctuation">.</span>moving_left <span class="token operator">=</span> <span class="token boolean">False</span>
+
+
+<span class="token keyword">def</span> <span class="token function">check_events</span><span class="token punctuation">(</span>ai_settings<span class="token punctuation">,</span> screen<span class="token punctuation">,</span> ship<span class="token punctuation">,</span> bullets<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;响应按键和鼠标事件&quot;&quot;&quot;</span>
+    <span class="token keyword">for</span> event <span class="token keyword">in</span> pygame<span class="token punctuation">.</span>event<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> event<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> pygame<span class="token punctuation">.</span>QUIT<span class="token punctuation">:</span>
+            sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> event<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> pygame<span class="token punctuation">.</span>KEYDOWN<span class="token punctuation">:</span>
+            check_keydown_events<span class="token punctuation">(</span>event<span class="token punctuation">,</span> ai_settings<span class="token punctuation">,</span> screen<span class="token punctuation">,</span> ship<span class="token punctuation">,</span> bullets<span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> event<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> pygame<span class="token punctuation">.</span>KEYUP<span class="token punctuation">:</span>
+            check_keyup_events<span class="token punctuation">(</span>event<span class="token punctuation">,</span> ship<span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">update_screen</span><span class="token punctuation">(</span>ai_settings<span class="token punctuation">,</span> screen<span class="token punctuation">,</span> ship<span class="token punctuation">,</span> bullets<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;更新屏幕上的图像,并切换到新屏幕&quot;&quot;&quot;</span>
+    <span class="token comment"># 每次循环时都重绘屏幕</span>
+    screen<span class="token punctuation">.</span>fill<span class="token punctuation">(</span>ai_settings<span class="token punctuation">.</span>bg_color<span class="token punctuation">)</span>
+    <span class="token comment"># 在飞船和外星人后面重绘所有子弹</span>
+    <span class="token keyword">for</span> bullets <span class="token keyword">in</span> bullets<span class="token punctuation">.</span>sprites<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        bullets<span class="token punctuation">.</span>draw_bullet<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    ship<span class="token punctuation">.</span>blitme<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment"># 让最近绘制的屏幕可见</span>
+    pygame<span class="token punctuation">.</span>display<span class="token punctuation">.</span>flip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+</code></pre></div><ol start="7"><li>创建Alien类
+Alien类控制外星人的移动</li></ol> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment"># alien.py</span>
+<span class="token keyword">import</span> pygame
+<span class="token keyword">from</span> pygame<span class="token punctuation">.</span>sprite <span class="token keyword">import</span> Sprite
+
+
+<span class="token keyword">class</span> <span class="token class-name">Alien</span><span class="token punctuation">(</span>Sprite<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;表示单个外星人的类&quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> ai_settings<span class="token punctuation">,</span> screen<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;初始化外星人并设置其起始位置&quot;&quot;&quot;</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>screen <span class="token operator">=</span> screen
+        self<span class="token punctuation">.</span>ai_settings <span class="token operator">=</span> ai_settings
+        <span class="token comment"># 加载外星人图像,并设置其rect属性</span>
+        self<span class="token punctuation">.</span>image <span class="token operator">=</span> pygame<span class="token punctuation">.</span>image<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token string">'images/alien.bmp'</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>rect <span class="token operator">=</span> self<span class="token punctuation">.</span>image<span class="token punctuation">.</span>get_rect<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment"># 每个外星人最初都在屏幕左上角附近</span>
+        self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>x <span class="token operator">=</span> self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>width
+        self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>y <span class="token operator">=</span> self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>height
+        <span class="token comment"># 存储外星人的准确位置</span>
+        self<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>x<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">blitme</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;在指定位置绘制外星人&quot;&quot;&quot;</span>
+        self<span class="token punctuation">.</span>screen<span class="token punctuation">.</span>blit<span class="token punctuation">(</span>self<span class="token punctuation">.</span>image<span class="token punctuation">,</span> self<span class="token punctuation">.</span>rect<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">check_edges</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;如果外星人位于屏幕边缘,就返回True&quot;&quot;&quot;</span>
+        screen_rect <span class="token operator">=</span> self<span class="token punctuation">.</span>screen<span class="token punctuation">.</span>get_rect<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>right <span class="token operator">&gt;=</span> screen_rect<span class="token punctuation">.</span>right<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">True</span>
+        <span class="token keyword">elif</span> self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>left <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">True</span>
+
+    <span class="token keyword">def</span> <span class="token function">update</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;向左或右移动外星人&quot;&quot;&quot;</span>
+        self<span class="token punctuation">.</span>x <span class="token operator">+=</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>ai_settings<span class="token punctuation">.</span>alien_speed_factor<span class="token operator">*</span>self<span class="token punctuation">.</span>ai_settings<span class="token punctuation">.</span>fleet_direction<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>x <span class="token operator">=</span> self<span class="token punctuation">.</span>x
+
+</code></pre></div><h2 id="_7-监测子弹与外星人的碰撞"><a href="#_7-监测子弹与外星人的碰撞" class="header-anchor">#</a> 7. 监测子弹与外星人的碰撞</h2> <p>sprite.groupcollide()方法将每颗子弹的rect同每个外星人的rect进行比较,并返回一个字典</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment"># game_functions.py</span>
+<span class="token keyword">def</span> <span class="token function">update_bullets</span><span class="token punctuation">(</span>aliens<span class="token punctuation">,</span> bullets<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token string">&quot;&quot;</span>&quot;更新子弹的位置<span class="token punctuation">,</span>并删除已消失的子弹
+		<span class="token operator">-</span><span class="token operator">-</span>snip<span class="token operator">-</span><span class="token operator">-</span>
+		<span class="token comment"># 检查是否有子弹击中了外星人</span>
+		<span class="token comment"># 如果击中,删除相应的子弹和外星人</span>
+		collisions <span class="token operator">=</span> pygame<span class="token punctuation">.</span>sprite<span class="token punctuation">.</span>groupcollide<span class="token punctuation">(</span>bullets<span class="token punctuation">,</span> aliens<span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="_8-添加play按钮"><a href="#_8-添加play按钮" class="header-anchor">#</a> 8.添加Play按钮</h2> <ol><li>创建Button类</li></ol> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment"># button.py</span>
+<span class="token keyword">import</span> pygame<span class="token punctuation">.</span>font
+
+<span class="token keyword">class</span> <span class="token class-name">Button</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> ai_settings<span class="token punctuation">,</span> screen<span class="token punctuation">,</span> msg<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;初始化按钮的属性&quot;&quot;&quot;</span>
+        self<span class="token punctuation">.</span>screen <span class="token operator">=</span> screen
+        self<span class="token punctuation">.</span>screen_rect <span class="token operator">=</span> screen<span class="token punctuation">.</span>get_rect<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment"># 设置按钮的尺寸和其他属性</span>
+        self<span class="token punctuation">.</span>width<span class="token punctuation">,</span> self<span class="token punctuation">.</span>height <span class="token operator">=</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">50</span>
+        self<span class="token punctuation">.</span>button_color <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>text_color <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>font <span class="token operator">=</span> pygame<span class="token punctuation">.</span>font<span class="token punctuation">.</span>SysFont<span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">,</span> <span class="token number">48</span><span class="token punctuation">)</span>
+        <span class="token comment"># 创建按钮的rect对象,并使其居中</span>
+        self<span class="token punctuation">.</span>rect <span class="token operator">=</span> pygame<span class="token punctuation">.</span>Rect<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>width<span class="token punctuation">,</span> self<span class="token punctuation">.</span>height<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>center <span class="token operator">=</span> self<span class="token punctuation">.</span>screen_rect<span class="token punctuation">.</span>center
+        <span class="token comment"># 按钮的标签只需创建一次</span>
+        self<span class="token punctuation">.</span>prep_msg<span class="token punctuation">(</span>msg<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">prep_msg</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> msg<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;将msg渲染为图像,并使其在按钮上居中&quot;&quot;&quot;</span>
+        self<span class="token punctuation">.</span>msg_image <span class="token operator">=</span> self<span class="token punctuation">.</span>font<span class="token punctuation">.</span>render<span class="token punctuation">(</span>msg<span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>text_color<span class="token punctuation">,</span> self<span class="token punctuation">.</span>button_color<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>msg_image_rect <span class="token operator">=</span> self<span class="token punctuation">.</span>msg_image<span class="token punctuation">.</span>get_rect<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>msg_image_rect<span class="token punctuation">.</span>center <span class="token operator">=</span> self<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>center
+
+
+    <span class="token keyword">def</span> <span class="token function">draw_button</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;绘制一个用颜色填充的按钮,在绘制文本&quot;&quot;&quot;</span>
+        self<span class="token punctuation">.</span>screen<span class="token punctuation">.</span>fill<span class="token punctuation">(</span>self<span class="token punctuation">.</span>button_color<span class="token punctuation">,</span> self<span class="token punctuation">.</span>rect<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>screen<span class="token punctuation">.</span>blit<span class="token punctuation">(</span>self<span class="token punctuation">.</span>msg_image<span class="token punctuation">,</span> self<span class="token punctuation">.</span>msg_image_rect<span class="token punctuation">)</span>
+</code></pre></div><p>导入模块pygame.font,它让Pygame能够将文本渲染到屏幕上。<br>
+2. 在屏幕上绘制按钮<br>
+alien_invasion.py中添加绘制button的代码</p> <ul><li>导入button类</li> <li>循环前创建Play按钮 play_button=Button(ai_settings, screen, &quot;Play&quot;)</li></ul> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment"># alien_invasion.py</span>
+<span class="token operator">-</span><span class="token operator">-</span>snip<span class="token operator">-</span><span class="token operator">-</span>
+<span class="token keyword">from</span> game_stats <span class="token keyword">import</span> GameStats
+<span class="token keyword">from</span> button <span class="token keyword">import</span> Button
+<span class="token operator">-</span><span class="token operator">-</span>snip<span class="token operator">-</span><span class="token operator">-</span>
+<span class="token keyword">def</span> <span class="token function">run_game</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token operator">-</span><span class="token operator">-</span>snip<span class="token operator">-</span><span class="token operator">-</span>
+		pygame<span class="token punctuation">.</span>display<span class="token punctuation">.</span>set_caption<span class="token punctuation">(</span><span class="token string">&quot;Alien Invasion&quot;</span><span class="token punctuation">)</span>
+		<span class="token operator">-</span><span class="token operator">-</span>snip<span class="token operator">-</span><span class="token operator">-</span>
+		<span class="token comment"># 开始游戏主循环</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+		    <span class="token operator">-</span><span class="token operator">-</span>snip<span class="token operator">-</span><span class="token operator">-</span>
+				gf<span class="token punctuation">.</span>update_screen<span class="token punctuation">(</span>ai_settings<span class="token punctuation">,</span> screen<span class="token punctuation">,</span> stats<span class="token punctuation">,</span> ship<span class="token punctuation">,</span> aliens<span class="token punctuation">,</span> bullets<span class="token punctuation">,</span> play_button<span class="token punctuation">)</span>
+</code></pre></div><ul><li>游戏处于非活动状态时显示Play按钮:</li></ul> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">def</span> <span class="token function">update_screen</span><span class="token punctuation">(</span>ai_settings<span class="token punctuation">,</span> screen<span class="token punctuation">,</span> stats<span class="token punctuation">,</span> ship<span class="token punctuation">,</span> aliens<span class="token punctuation">,</span> bullets<span class="token punctuation">,</span> play_button<span class="token punctuation">)</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;更新屏幕上的图像,并切换到新屏幕&quot;&quot;&quot;</span>
+		<span class="token operator">-</span><span class="token operator">-</span>snip<span class="token operator">-</span><span class="token operator">-</span>
+		<span class="token comment"># 如果游戏处于非活动状态,就绘制Play按钮</span>
+		<span class="token keyword">if</span> <span class="token keyword">not</span> stats<span class="token punctuation">.</span>game_active<span class="token punctuation">:</span>
+		    play_button<span class="token punctuation">.</span>draw_button<span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token comment"># 让最近绘制的屏幕可见</span>
+		pygame<span class="token punctuation">.</span>display<span class="token punctuation">.</span>flip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><ol start="3"><li>开始游戏</li></ol> <ul><li>添加监听鼠标按键事件</li> <li>检测鼠标点击位置是否在play按钮内</li></ul> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment"># game_functions.py</span>
+<span class="token keyword">def</span> <span class="token function">check_events</span><span class="token punctuation">(</span>ai_settings<span class="token punctuation">,</span> screen<span class="token punctuation">,</span> stats<span class="token punctuation">,</span> play_button<span class="token punctuation">,</span>ship<span class="token punctuation">,</span> bullets<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;响应按键和鼠标事件&quot;&quot;&quot;</span>
+    <span class="token keyword">for</span> event <span class="token keyword">in</span> pygame<span class="token punctuation">.</span>event<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> event<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> pygame<span class="token punctuation">.</span>QUIT<span class="token punctuation">:</span>
+            sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> event<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> pygame<span class="token punctuation">.</span>KEYDOWN<span class="token punctuation">:</span>
+            check_keydown_events<span class="token punctuation">(</span>event<span class="token punctuation">,</span> ai_settings<span class="token punctuation">,</span> screen<span class="token punctuation">,</span> ship<span class="token punctuation">,</span> bullets<span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> event<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> pygame<span class="token punctuation">.</span>KEYUP<span class="token punctuation">:</span>
+            check_keyup_events<span class="token punctuation">(</span>event<span class="token punctuation">,</span> ship<span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> event<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> pygame<span class="token punctuation">.</span>MOUSEBUTTONDOWN<span class="token punctuation">:</span>
+            mouse_x<span class="token punctuation">,</span>mouse_y <span class="token operator">=</span> pygame<span class="token punctuation">.</span>mouse<span class="token punctuation">.</span>get_pos<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            check_play_button<span class="token punctuation">(</span>stats<span class="token punctuation">,</span> play_button<span class="token punctuation">,</span> mouse_x<span class="token punctuation">,</span> mouse_y<span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">check_play_button</span><span class="token punctuation">(</span>stats<span class="token punctuation">,</span> play_button<span class="token punctuation">,</span> mouse_x<span class="token punctuation">,</span> mouse_y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;玩家单击Play按钮时开始新游戏&quot;&quot;&quot;</span>
+    <span class="token keyword">if</span> play_button<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>collidepoint<span class="token punctuation">(</span>mouse_x<span class="token punctuation">,</span> mouse_y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        stats<span class="token punctuation">.</span>game_active <span class="token operator">=</span> <span class="token boolean">True</span>
+</code></pre></div><ol start="4"><li>重置游戏</li></ol> <ul><li>当鼠标点击button且游戏是非活动状态的时候才能点击</li> <li>当游戏开始时隐藏鼠标</li></ul> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment"># game_functions.py</span>
+<span class="token keyword">def</span> <span class="token function">check_play_button</span><span class="token punctuation">(</span>ai_settings<span class="token punctuation">,</span> screen<span class="token punctuation">,</span> stats<span class="token punctuation">,</span> play_button<span class="token punctuation">,</span> ship<span class="token punctuation">,</span> aliens<span class="token punctuation">,</span> bullets<span class="token punctuation">,</span> mouse_x<span class="token punctuation">,</span> mouse_y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;玩家单击Play按钮时开始新游戏&quot;&quot;&quot;</span>
+    button_clicked <span class="token operator">=</span> play_button<span class="token punctuation">.</span>rect<span class="token punctuation">.</span>collidepoint<span class="token punctuation">(</span>mouse_x<span class="token punctuation">,</span> mouse_y<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> button_clicked <span class="token keyword">and</span> <span class="token keyword">not</span> stats<span class="token punctuation">.</span>game_active<span class="token punctuation">:</span>
+				<span class="token comment"># 隐藏光标</span>
+        pygame<span class="token punctuation">.</span>mouse<span class="token punctuation">.</span>set_visible<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+        <span class="token comment"># 重置游戏统计信息</span>
+        stats<span class="token punctuation">.</span>reset_stats<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        stats<span class="token punctuation">.</span>game_active <span class="token operator">=</span> <span class="token boolean">True</span>
+        <span class="token comment"># 清空外星人列表和子弹列表</span>
+        aliens<span class="token punctuation">.</span>empty<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        bullets<span class="token punctuation">.</span>empty<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment"># 创建一群新的外星人,并让飞船居中</span>
+        create_fleet<span class="token punctuation">(</span>ai_settings<span class="token punctuation">,</span> screen<span class="token punctuation">,</span> ship<span class="token punctuation">,</span> aliens<span class="token punctuation">)</span>
+        ship<span class="token punctuation">.</span>center_ship<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="_9-修改速度设置"><a href="#_9-修改速度设置" class="header-anchor">#</a> 9.修改速度设置</h2> <ul><li>settings.py 分离代码</li> <li>每次消灭外星人后加快速度</li></ul> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">class</span> <span class="token class-name">Settings</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;存储&lt;&lt;外星人入侵&gt;&gt;的所有设置的类&quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;初始化游戏的静态设置&quot;&quot;&quot;</span>
+        <span class="token comment"># 屏幕设置</span>
+        self<span class="token punctuation">.</span>screen_width <span class="token operator">=</span> <span class="token number">1200</span>
+        self<span class="token punctuation">.</span>screen_height <span class="token operator">=</span> <span class="token number">800</span>
+        self<span class="token punctuation">.</span>bg_color <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">230</span><span class="token punctuation">,</span> <span class="token number">230</span><span class="token punctuation">,</span> <span class="token number">230</span><span class="token punctuation">)</span>
+        <span class="token comment"># 飞船的设置</span>
+        self<span class="token punctuation">.</span>ship_limit <span class="token operator">=</span> <span class="token number">3</span>
+        <span class="token comment"># 子弹设置</span>
+        self<span class="token punctuation">.</span>bullet_width <span class="token operator">=</span> <span class="token number">3</span>
+        self<span class="token punctuation">.</span>bullet_height <span class="token operator">=</span> <span class="token number">15</span>
+        self<span class="token punctuation">.</span>bullet_color <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span> <span class="token number">60</span><span class="token punctuation">,</span> <span class="token number">60</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>bullet_allowed <span class="token operator">=</span> <span class="token number">10</span>
+        <span class="token comment"># 外星人设置</span>
+        self<span class="token punctuation">.</span>fleet_drop_speed <span class="token operator">=</span> <span class="token number">10</span>
+        <span class="token comment"># 以什么样的速度加快游戏节奏</span>
+        self<span class="token punctuation">.</span>speedup_scale <span class="token operator">=</span> <span class="token number">1.1</span>
+        self<span class="token punctuation">.</span>initialize_dynamic_settings<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+    <span class="token keyword">def</span> <span class="token function">initialize_dynamic_settings</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;初始化随游戏进行而变化的设置&quot;&quot;&quot;</span>
+        self<span class="token punctuation">.</span>ship_speed_factor <span class="token operator">=</span> <span class="token number">1.5</span>
+        self<span class="token punctuation">.</span>bullet_speed_factor <span class="token operator">=</span> <span class="token number">3</span>
+        self<span class="token punctuation">.</span>alien_speed_factor <span class="token operator">=</span> <span class="token number">1</span>
+        <span class="token comment"># fleet_direction 为1表示向右移,为-1表示向左移</span>
+        self<span class="token punctuation">.</span>fleet_direction <span class="token operator">=</span> <span class="token number">1</span>
+
+    <span class="token keyword">def</span> <span class="token function">increase_speed</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;提高速度设置&quot;&quot;&quot;</span>
+        self<span class="token punctuation">.</span>ship_speed_factor <span class="token operator">*=</span> self<span class="token punctuation">.</span>speedup_scale
+        self<span class="token punctuation">.</span>bullet_speed_factor <span class="token operator">*=</span> self<span class="token punctuation">.</span>speedup_scale
+        self<span class="token punctuation">.</span>alien_speed_factor <span class="token operator">*=</span> self<span class="token punctuation">.</span>speedup_scale
+</code></pre></div><h2 id="_10-显示得分"><a href="#_10-显示得分" class="header-anchor">#</a> 10.显示得分</h2> <p>scoreboard.py</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">import</span> pygame<span class="token punctuation">.</span>font
+<span class="token keyword">class</span> <span class="token class-name">Scoreboard</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;显示得分信息的类&quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> ai_settings<span class="token punctuation">,</span> screen<span class="token punctuation">,</span> stats<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;初始化显示得分涉及的属性&quot;&quot;&quot;</span>
+        self<span class="token punctuation">.</span>screen <span class="token operator">=</span> screen
+        self<span class="token punctuation">.</span>screen_rect <span class="token operator">=</span> screen<span class="token punctuation">.</span>get_rect<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>ai_settings <span class="token operator">=</span> ai_settings
+        self<span class="token punctuation">.</span>stats <span class="token operator">=</span> stats
+        <span class="token comment"># 显示得分信息时使用的字体设置</span>
+        self<span class="token punctuation">.</span>text_color <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>font <span class="token operator">=</span> pygame<span class="token punctuation">.</span>font<span class="token punctuation">.</span>SysFont<span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">,</span> <span class="token number">48</span><span class="token punctuation">)</span>
+        <span class="token comment"># 准备初始得分图像</span>
+        self<span class="token punctuation">.</span>prep_score<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">prep_score</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;将得分转换为一幅渲染的图像&quot;&quot;&quot;</span>
+        score_str <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>stats<span class="token punctuation">.</span>score<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>score_image <span class="token operator">=</span> self<span class="token punctuation">.</span>font<span class="token punctuation">.</span>render<span class="token punctuation">(</span>score_str<span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>text_color<span class="token punctuation">,</span> self<span class="token punctuation">.</span>ai_settings<span class="token punctuation">.</span>bg_color<span class="token punctuation">)</span>
+        <span class="token comment"># 将得分放在屏幕右上角</span>
+        self<span class="token punctuation">.</span>score_rect <span class="token operator">=</span> self<span class="token punctuation">.</span>score_image<span class="token punctuation">.</span>get_rect<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>score_rect<span class="token punctuation">.</span>right <span class="token operator">=</span> self<span class="token punctuation">.</span>screen_rect<span class="token punctuation">.</span>right <span class="token operator">-</span> <span class="token number">20</span>
+        self<span class="token punctuation">.</span>score_rect<span class="token punctuation">.</span>top <span class="token operator">=</span> <span class="token number">20</span>
+
+    <span class="token keyword">def</span> <span class="token function">shwo_score</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;在屏幕上显示得分&quot;&quot;&quot;</span>
+        self<span class="token punctuation">.</span>screen<span class="token punctuation">.</span>blit<span class="token punctuation">(</span>self<span class="token punctuation">.</span>score_image<span class="token punctuation">,</span> self<span class="token punctuation">.</span>score_rect<span class="token punctuation">)</span>
+
+</code></pre></div><p>更新得分 check_bullet_alien_collision() collisions发生的时候添加得分</p></div> <footer><!----> <hr> <!----></footer></article> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#规划项目" title="规划项目">规划项目</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#安装pygame" title="安装Pygame">安装Pygame</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#_1-绘制窗口" title="1.绘制窗口">1.绘制窗口</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#_2-设置背景色" title="2.设置背景色">2.设置背景色</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#_3-创建设置类" title="3.创建设置类">3.创建设置类</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#_4-添加飞船图像" title="4. 添加飞船图像">4. 添加飞船图像</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#_5-重构-模块game-functions" title="5.重构: 模块game_functions">5.重构: 模块game_functions</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#_6-驾驶飞船" title="6.驾驶飞船">6.驾驶飞船</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#_7-监测子弹与外星人的碰撞" title="7. 监测子弹与外星人的碰撞">7. 监测子弹与外星人的碰撞</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#_8-添加play按钮" title="8.添加Play按钮">8.添加Play按钮</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#_9-修改速度设置" title="9.修改速度设置">9.修改速度设置</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#_10-显示得分" title="10.显示得分">10.显示得分</a></div></div></div></div> <footer class="footer" data-v-fdbf4940><div class="footer-left-wrap" data-v-fdbf4940><ul class="contact" data-v-fdbf4940></ul></div> <div class="footer-right-wrap" data-v-fdbf4940><ul class="copyright" data-v-fdbf4940></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.91516f2d.js" defer></script><script src="/assets/js/7.58fd3bc6.js" defer></script><script src="/assets/js/4.d132524d.js" defer></script><script src="/assets/js/30.f134215e.js" defer></script>
+  </body>
+</html>
